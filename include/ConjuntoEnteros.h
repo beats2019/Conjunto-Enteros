@@ -6,7 +6,9 @@ class IntegerArray
 {
     public:
 
-        IntegerArray( );
+        IntegerArray();
+        IntegerArray( int const * , const int );
+
         ~IntegerArray();
         void insertElement( const int );
         void deleteElement( const int );
@@ -24,8 +26,8 @@ class IntegerArray
 
 
     private:
-        const int arraySize = 100;
-        int elements[ 100 ];
+        int arraySize;
+        int* elements;
 
 };
 

@@ -1,19 +1,36 @@
 #include "ConjuntoEnteros.h"
+#include <ctime>
+#include <cstdlib>
 #include <cstring>
 #include <iostream>
 using namespace std;
 
-//ConjuntoEnteros::tamanioArreglo = 100;
-
-
-IntegerArray::IntegerArray(  )
+IntegerArray::IntegerArray()
 {
 
-    for( int i = 0; i < 100; i++ )
-        elements[ i ] = 1;
+    arraySize = 100;
+    elements = new int[arraySize];
+
+    for( int i = 0; i < arraySize; i++ )
+        elements[ i ] = rand() % 2;
 
 
 }
+/*
+IntegerArray::IntegerArray( int const * givenArray, const int tam )
+{
+    arraySize = tam;
+    elements = new int[tam];
+
+
+    for( int i = 0; i < tam ; i++ )
+    {
+        *elements = *givenArray;
+        elements++;
+        givenArray++;
+    }
+
+}*/
 IntegerArray::~IntegerArray()
 {
 
@@ -37,10 +54,10 @@ int* IntegerArray::getArray()
 
 int * IntegerArray:: intersectionSets( int * const arr )
 {
-    int* finalArray = new int[ 100 ];
+    int* finalArray = new int[ arraySize ];
     int counter = 0;
 
-		while( counter < 100 )
+		while( counter < arraySize )
 		{
 			if( elements[ counter ] == *arr )
             {
@@ -59,10 +76,10 @@ int * IntegerArray:: intersectionSets( int * const arr )
 
 int * IntegerArray:: unionSets( int * const arr )
 {
-    int* finalArray = new int[ 100 ];
+    int* finalArray = new int[ arraySize ];
     int counter = 0;
 
-		while( counter < 100 )
+		while( counter < arraySize )
 		{
 			if( elements[ counter ] == 1 or *arr == 1 )
             {
@@ -79,12 +96,10 @@ int * IntegerArray:: unionSets( int * const arr )
 }
 
 
-
-
 void IntegerArray::setElements( int const * dir )
 {
     int i = 0;
-    while( i < 100 )
+    while( i < arraySize )
     {
         elements[ i ] = *dir;
         dir++;
@@ -94,19 +109,24 @@ void IntegerArray::setElements( int const * dir )
 
 void IntegerArray::printElements() const
 {
-    for( int i = 0; i < 100; i++ )
+    for( int i = 0; i < arraySize; i++ )
     {
-       cout << elements[ i ] << endl;
+        if( elements[ i ] != 0 )
+           cout << elements[ i ] << endl;
     }
 }
 
 bool IntegerArray::sameArrayAs( int const * a )
 {
     int i = 0;
-    while( i < 100 )
+    while( i < arraySize )
     {
         if( *a != elements[ i ] )
-          return false;
+        {
+            cout << "At " << i <<" not same" << endl;
+            return false; // different array
+        }
+
         a++;
         i++;
     }

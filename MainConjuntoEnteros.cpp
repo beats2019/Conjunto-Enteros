@@ -1,6 +1,9 @@
+#include "ConjuntoEnteros.h"
+#include <ctime>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
 using namespace std;
-#include "ConjuntoEnteros.h"
 
 // TODO (Phyruos Lazy LTE#1#): Compare elementA with ElementsB
 // TODO (Phyruos Lazy LTE#1#): Send elemets(b) to A
@@ -8,27 +11,21 @@ using namespace std;
 
     int main()
     {
+        srand( time ( 0 ) );
+
+        int aArray[11] = { 3, 4, 5, 2, 5, 2, 4, 6, 34, 64 , 2};
+
+
+
+
         IntegerArray A;
         IntegerArray B;
         IntegerArray C;
 
+        A.printElements();
 
-		int *localArray = B.getArray();
+        cout << "Same as returns " << A.sameArrayAs( B.getArray() ) << endl;
 
-		int *localArray2 = A.unionSets( localArray );
-
-		C.setElements( localArray2 );
-
-        C.printElements();
-
-		/*
-		int iterador = 0;
-		while( iterador < 100 )
-		{
-			cout << *localArray << endl;
-			localArray++;
-			iterador++;
-		}*/
 
 
 

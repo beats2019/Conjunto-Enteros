@@ -10,3 +10,19 @@
 	<iostream>
 	"ConjuntoEnteros.h"
 
+1562086129 source:c:\users\andres\documents\jla\c++\conjunto enteros\src\conjuntoenteros.cpp
+	"ConjuntoEnteros.h"
+	<ctime>
+	<cstdlib>
+	<cstring>
+	<iostream>
+
+1562086025 c:\users\andres\documents\jla\c++\conjunto enteros\include\conjuntoenteros.h
+
+1562086095 source:c:\users\andres\documents\jla\c++\conjunto enteros\mainconjuntoenteros.cpp
+	"ConjuntoEnteros.h"
+	<ctime>
+	<cstdlib>
+	<cstring>
+	<iostream>
+
