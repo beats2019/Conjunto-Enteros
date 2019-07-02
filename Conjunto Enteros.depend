@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1562081435 source:d:\ppi\easyform\conjunto enteros\src\conjuntoenteros.cpp
+	"ConjuntoEnteros.h"
+	<cstring>
+	<iostream>
+
+1562081435 d:\ppi\easyform\conjunto enteros\include\conjuntoenteros.h
+
+1562080986 source:d:\ppi\easyform\conjunto enteros\mainconjuntoenteros.cpp
+	<iostream>
+	"ConjuntoEnteros.h"
+
