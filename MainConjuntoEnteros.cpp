@@ -18,13 +18,14 @@ using namespace std;
 
 
 
-        IntegerArray A;
+        IntegerArray A( aArray, 11 );
         IntegerArray B;
         IntegerArray C;
 
         A.printElements();
 
-        cout << "Same as returns " << A.sameArrayAs( B.getArray() ) << endl;
+
+//        cout << "Same as returns " << A.sameArrayAs( B.getArray() ) << endl;
 
 
 

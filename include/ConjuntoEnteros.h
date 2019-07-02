@@ -15,19 +15,13 @@ class IntegerArray
         int* getArray() ;
         int* intersectionSets( int * const );
         void setElements( int const * );
-        void printElements() const;
+        void printElements() ;
         int * unionSets( int * const );
         bool sameArrayAs( int const * );
 
-
-
-
-
-
-
     private:
         int arraySize;
-        int* elements;
+        int *elements;
 
 };
 

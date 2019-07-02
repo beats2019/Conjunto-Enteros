@@ -9,31 +9,34 @@ IntegerArray::IntegerArray()
 {
 
     arraySize = 100;
-    elements = new int[arraySize];
+    elements = new int[ arraySize ];
+
 
     for( int i = 0; i < arraySize; i++ )
         elements[ i ] = rand() % 2;
 
 
 }
-/*
+
 IntegerArray::IntegerArray( int const * givenArray, const int tam )
 {
     arraySize = tam;
-    elements = new int[tam];
+    elements = new int[ arraySize ];
+    int *originalPtr = elements;
 
-
-    for( int i = 0; i < tam ; i++ )
+    for( int i = 0; i < arraySize ; i++ )
     {
         *elements = *givenArray;
         elements++;
         givenArray++;
     }
+    elements = originalPtr;
 
-}*/
+
+}
 IntegerArray::~IntegerArray()
 {
-
+    cout << "What the hell???";
 }
 
 void IntegerArray:: insertElement( const int pos )
@@ -107,12 +110,17 @@ void IntegerArray::setElements( int const * dir )
     }
 }
 
-void IntegerArray::printElements() const
+void IntegerArray::printElements()
 {
-    for( int i = 0; i < arraySize; i++ )
+    cout << "Print trial" << endl;
+    cout << "Array size = " << arraySize << endl;
+
+    int counter = 0;
+    while( counter < arraySize)
     {
-        if( elements[ i ] != 0 )
-           cout << elements[ i ] << endl;
+        cout << *elements << endl;
+        elements++;
+        counter++;
     }
 }
 
