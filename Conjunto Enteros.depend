@@ -10,16 +10,16 @@
 	<iostream>
 	"ConjuntoEnteros.h"
 
-1562095666 source:c:\users\andres\documents\jla\c++\conjunto enteros\src\conjuntoenteros.cpp
+1562106728 source:c:\users\andres\documents\jla\c++\conjunto enteros\src\conjuntoenteros.cpp
 	"ConjuntoEnteros.h"
 	<ctime>
 	<cstdlib>
 	<cstring>
 	<iostream>
 
-1562095416 c:\users\andres\documents\jla\c++\conjunto enteros\include\conjuntoenteros.h
+1562106728 c:\users\andres\documents\jla\c++\conjunto enteros\include\conjuntoenteros.h
 
-1562094160 source:c:\users\andres\documents\jla\c++\conjunto enteros\mainconjuntoenteros.cpp
+1562106751 source:c:\users\andres\documents\jla\c++\conjunto enteros\mainconjuntoenteros.cpp
 	"ConjuntoEnteros.h"
 	<ctime>
 	<cstdlib>

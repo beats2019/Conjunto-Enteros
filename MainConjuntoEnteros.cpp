@@ -11,25 +11,25 @@ using namespace std;
 
     int main()
     {
+
         srand( time ( 0 ) );
 
-        int aArray[11] = { 3, 4, 5, 2, 5, 2, 4, 6, 34, 64 , 2};
+        int aArray[11] = { 1, 1 , 0, 0 ,0 , 1 , 0 ,1 , 0 ,0 , 1};
+        int bArray[11] = { 1, 0 , 1, 1 ,1 , 1 , 1 ,1 , 0 ,1 , 0};
 
+        const int tam = 11;
 
-
-
-        IntegerArray A( aArray, 11 );
-        IntegerArray B;
+        IntegerArray A( aArray, tam );
+        IntegerArray B(bArray, tam);
         IntegerArray C;
 
-        A.printElements();
+        int *localArray = B.getArray();
 
+		int *localArray2 = A.unionSets( localArray );
 
-//        cout << "Same as returns " << A.sameArrayAs( B.getArray() ) << endl;
+		C.setElements( localArray2 , tam);
 
-
-
-
+		C.printElements();
 
         return 0;
 
